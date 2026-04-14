@@ -1,14 +1,8 @@
 "use client";
 
 import { useRef } from "react";
-import dynamic from "next/dynamic";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Navbar from "@/app/components/Navbar";
-
-const OrchestrationCanvas = dynamic(
-  () => import("@/app/components/three/OrchestrationCanvas"),
-  { ssr: false },
-);
 
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -30,8 +24,6 @@ export default function Hero() {
         autoPlay
         src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260307_083826_e938b29f-a43a-41ec-a153-3d4730578ab8.mp4"
       />
-
-      <OrchestrationCanvas />
 
       <div className="absolute inset-0 bg-black/40 z-[1]" />
 

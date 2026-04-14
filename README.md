@@ -12,7 +12,7 @@ This is a pnpm monorepo with three apps and a shared types package.
 apps/
   desktop/    Tauri v2 shell wrapping a React + Vite frontend
   server/     Express API with Drizzle ORM over SQLite
-  fe/         Next.js landing page with Three.js visuals
+  fe/         Next.js marketing landing page
 packages/
   shared/     TypeScript types shared across apps
 ```
@@ -26,7 +26,7 @@ packages/
 
 **Server** — REST API backing the desktop app. Routes for companies, deals, people, meetings, memos, theses, tasks, funds, pipeline summaries, search, and activity feeds. Auto-migrates and seeds on startup.
 
-**Landing page** — Marketing site with Three.js animations showing the orchestration concept: agent orbs, data particles, connector tiles, memory mesh.
+**Landing page** — Marketing site with a video hero, scroll-driven animations, feature breakdowns, and a CTA. Built with Framer Motion for page transitions.
 
 ## Tech stack
 
@@ -35,7 +35,7 @@ packages/
 | Desktop shell | Tauri v2 (Rust) |
 | Desktop frontend | React 19, Vite 6, TanStack Query, Zustand, Tailwind v4, shadcn/ui |
 | Server | Express, Drizzle ORM, better-sqlite3 |
-| Landing page | Next.js 16, React Three Fiber, Framer Motion |
+| Landing page | Next.js 16, Framer Motion |
 | Monorepo | pnpm workspaces, Turborepo |
 
 ## Getting started
@@ -92,7 +92,6 @@ apps/server/
 apps/fe/
   app/
     components/        Navbar, word reveal animation
-    components/three/  Three.js scenes (agent orbs, data particles, etc.)
     sections/          Landing page sections (hero, features, how it works, CTA)
 ```
 
